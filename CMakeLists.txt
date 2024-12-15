@@ -6,7 +6,7 @@ project(mathkit CXX)
 
 set(SOURCES
     src/main.cpp    
-    src/lib.cpp
+    src/bigint.cpp
 )
 
 include_directories(include)
