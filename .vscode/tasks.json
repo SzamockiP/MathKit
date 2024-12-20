@@ -3,14 +3,33 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "Build",
-            "problemMatcher":"$msCompile",
-            
+            "label": "Configure with MinGW",
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "command":"cmake --build build"
+            "command": "cmake",
+            "args": [
+                "-S", ".",
+                "-B", "build",
+                "-G", "MinGW Makefiles",
+                "-DCMAKE_C_COMPILER=gcc",
+                "-DCMAKE_CXX_COMPILER=g++"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Build",
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "cmake",
+            "args": [
+                "--build", "build"
+            ]
         }
     ]
 }

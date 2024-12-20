@@ -1,8 +1,7 @@
 #pragma once
 #include <vector>
 #include <iostream>
-
-
+#include <cstdint>
 
 class BigInt
 {
