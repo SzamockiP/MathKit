@@ -3,7 +3,7 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "Configure with MinGW",
+            "label": "Configure with MinGW (Debug)",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -15,7 +15,8 @@
                 "-B", "build",
                 "-G", "MinGW Makefiles",
                 "-DCMAKE_C_COMPILER=gcc",
-                "-DCMAKE_CXX_COMPILER=g++"
+                "-DCMAKE_CXX_COMPILER=g++",
+                "-DCMAKE_BUILD_TYPE=Debug"
             ]
         },
         {
